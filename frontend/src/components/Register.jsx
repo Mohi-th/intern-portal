@@ -7,7 +7,7 @@ function Register({ setView }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/intern/register", form);
+      await axios.post("https://intern-portal-server.onrender.com/api/intern/register", form);
       alert("Registered successfully!");
       setView("login");
     } catch (err) {

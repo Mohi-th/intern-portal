@@ -7,7 +7,7 @@ function Login({ setView, setIntern }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/intern/login", form);
+      const res = await axios.post("https://intern-portal-server.onrender.com/api/intern/login", form);
       setIntern(res.data);
       setView("dashboard");
     } catch (err) {
